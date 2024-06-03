@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Example</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar-custom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f8f9fa;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-brand {
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+    }
+    .navbar-brand img {
+      margin-right: 10px;
+    }
+    .main-container {
+      display: flex;
+      height: 80vh; /* Full viewport height */
+      background-color: #f8f9fa;
+    }
+    .image-container, .form-container-wrapper {
+      flex: 1; /* Flex-grow to take up equal space */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .left-image {
+      height: 75vh; /* Full height of the container */
+      object-fit: cover; /* Ensure the image covers the entire container */
+      width: 90%; /* Ensure the image fills the entire container width */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .form-container {
+      width: 100%; /* Full width of the container */
+      max-width: 500px; /* Max width for the form */
+      padding: 2.5rem; /* Padding for the form */
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f8f9fa;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-custom">
+    <a class="navbar-brand" href="#">
+      <img src="icon.png" alt="Icon" style="width: 30px; height: 30px;">
+      Movie Point
+    </a>
+  </nav>
+  
+  <div class="main-container">
+    <!-- Left column for the image -->
+    <div class="image-container">
+      <img src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW92aWVzfGVufDB8fDB8fHww" alt="Movie Image" class="left-image">
+    </div>
+  
+    <!-- Right column for the form -->
+    <div class="form-container-wrapper">
+      <div class="form-container">
+        <form action="/signup" method="POST">
+          <div class="mb-3">
+            <label for="exampleInputusername" class="form-label">UserName</label>
+            <input type="text" class="form-control" id="exampleInputusername" name="username">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">Sign in</button>
+        </form>
+        <p>Already have a account? <a href="/login">Login!</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS and dependencies (optional, for interactive elements) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
